@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.ciranet.myworkqueue.disclosureprocessing.testcases.ClosingRequestsPageTest">
+        <methods>
+          <include name="verifySearchTab"/>
+          <include name="verifyToolBarFullScreen"/>
+          <include name="tearDown"/>
+          <include name="verifyActionTransfertoCollectionsOption"/>
+          <include name="actionCancleRequestOption"/>
+          <include name="verifySwitchingTabs"/>
+          <include name="verifyclosingRequeststURL"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyActionAssignPropertyOption"/>
+          <include name="verifyActionTransfertoTransitionOption"/>
+          <include name="verifySearchButton"/>
+          <include name="verifyRequestTypeFilter"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.disclosureprocessing.testcases.ClosingRequestsPageTest -->
+      <class name="com.ciranet.myworkqueue.communitymanagement.testcases.MaintenanceWorkOrdersPageTest">
+        <methods>
+          <include name="verifyManageWorkAuthorization"/>
+          <include name="verifychangeStatus"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="tearDown"/>
+          <include name="verifySwitchtab"/>
+          <include name="verifyViewEditWorkOrder"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="VerifyManageTaskReferences"/>
+          <include name="verifyExpandOption"/>
+          <include name="VerifyManageProposal"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyworkOrdersPageURL"/>
+          <include name="verifyClosedDaysTextbox"/>
+          <include name="verifyViewEditSaveWorkOrderClick"/>
+          <include name="VerifyAddNewWorkOrderClick"/>
+          <include name="verifyCollapseOption"/>
+          <include name="loginSetup"/>
+          <include name="verifyViewEditCloseWorkOrderClick"/>
+          <include name="verifycloseWorkOrder"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communitymanagement.testcases.MaintenanceWorkOrdersPageTest -->
+      <class name="com.ciranet.community.information.testcases.CommunityAssetsPageTest">
+        <methods>
+          <include name="verifyCommunityAssetsPage"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyDeleteAsset"/>
+          <include name="tearDown"/>
+          <include name="verifyEditAsset"/>
+          <include name="verifyUploadAssetImage"/>
+          <include name="verifyAddNewAsset"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.community.information.testcases.CommunityAssetsPageTest -->
+      <class name="com.ciranet.configurations.testcases.ProcessTrackerPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyConfigProcessTrackerClickPages"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyCommunityAutoCloseReportGeneration"/>
+          <include name="verifyProcessTrackerConfiguration"/>
+          <include name="verifyFinancialPackageConfiguration"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ProcessTrackerPageTest -->
+      <class name="com.ciranet.myworkqueue.receivableslockbox.testcases.StatementApprovalQueuePageTest">
+        <methods>
+          <include name="verifyDateFields"/>
+          <include name="verifyLocationSearch"/>
+          <include name="tearDown"/>
+          <include name="verifyStatementColumn"/>
+          <include name="verifyStatementApprovalQueueMenu"/>
+          <include name="verifyLogsColumn"/>
+          <include name="verifyRunIDClick"/>
+          <include name="verifyStatementRunsTab"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="VerifyToolBarFullScreen"/>
+          <include name="verifyStatementApprovalQueueURL"/>
+          <include name="verifySearchApprovalsTab"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.receivableslockbox.testcases.StatementApprovalQueuePageTest -->
+      <class name="com.ciranet.forgotpassword.testcases.ForgotPasswordPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="clickPreferences"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.forgotpassword.testcases.ForgotPasswordPageTest -->
+      <class name="com.ciranet.community.dashboard.testcases.QuickLinksPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="clickQuickLinksReviewOpenWorkOrders"/>
+          <include name="clickQuickLinksEvaluateRealManagePerformance"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="clickQuickLinksSsuggestionOrFeedback"/>
+          <include name="clickQuickLinksContactYourRealManageServiceTeam"/>
+          <include name="clickQuickLinksAddEditResidentAnnouncements"/>
+          <include name="clickQuickLinksAddEditProjectTasks"/>
+          <include name="clickQuickLinksReviewApprovedOpenAP"/>
+          <include name="clickQuickLinksNewsAndAnnouncements"/>
+          <include name="verifyQuickLinks"/>
+          <include name="clickQuickLinksContactRealManageClientSatisfactionTeam"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.community.dashboard.testcases.QuickLinksPageTest -->
+      <class name="com.ciranet.myworkqueue.communityonboarding.testcases.OnBoardingChecklistPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyEmailLinking"/>
+          <include name="verifyApproveAction"/>
+          <include name="tearDown"/>
+          <include name="verifyEmailReminderAction"/>
+          <include name="verifyChangeAssignedTo"/>
+          <include name="verifyDocumentsAdding"/>
+          <include name="verifyAddingNotes"/>
+          <include name="verifySetNotAppplicableAction"/>
+          <include name="verifyLogHistory"/>
+          <include name="verifyOnBoardingChecklist"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communityonboarding.testcases.OnBoardingChecklistPageTest -->
+      <class name="com.ciranet.myworkqueue.disclosureprocessing.testcases.PropertyConveyancePageTest">
+        <methods>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="VerifyactionEditCommunityCancel"/>
+          <include name="verifyToolbarNormalScreenOption"/>
+          <include name="tearDown"/>
+          <include name="verifyExpandOption"/>
+          <include name="verifyCompactModeOnPropertyConveyancePopup"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="verifyPropertyConveyanceWorkQueuePageURL"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="Verifyrefresh"/>
+          <include name="VerifyactionDeleteCommunity"/>
+          <include name="loginSetup"/>
+          <include name="verifySearchWorkQueueButton"/>
+          <include name="verifyToggleCompletedTabOpenTabs"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.disclosureprocessing.testcases.PropertyConveyancePageTest -->
+      <class name="com.ciranet.configurations.testcases.BatchJobEmailsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyConfigurationsMenu"/>
+          <include name="verifySelectSecondDropdown"/>
+          <include name="tearDown"/>
+          <include name="verifyNavigateToBatchJobEmails"/>
+          <include name="verifySelectThirdDropdown"/>
+          <include name="loginSetup"/>
+          <include name="verifySelectFourthDropdown"/>
+          <include name="verifySelectFifthDropdown"/>
+          <include name="verifyBatchJobEmails"/>
+          <include name="verifyFirstDropdown"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.BatchJobEmailsPageTest -->
+      <class name="com.ciranet.configurations.testcases.ModulesPageTest">
+        <methods>
+          <include name="verifyWorkOrderWorkArea"/>
+          <include name="verifySupplimentalInformation"/>
+          <include name="verifyHelp"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyConfigurations"/>
+          <include name="verifyTransitionDocuments"/>
+          <include name="verifyRecommendationsandAssumptions"/>
+          <include name="tearDown"/>
+          <include name="verifyTransitionTaskTemplates"/>
+          <include name="verifyconfigModulesClickPages"/>
+          <include name="loginSetup"/>
+          <include name="verifyEgnyteConfiguration"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ModulesPageTest -->
+      <class name="com.ciranet.configurations.testcases.CommunityAccountingPageTest">
+        <methods>
+          <include name="verifycollectionsConfiguration"/>
+          <include name="verifyCommunityAccountingPage"/>
+          <include name="tearDown"/>
+          <include name="verifyaapWorkFlowAutoAction"/>
+          <include name="verifyaarPaymentApplicationOrder"/>
+          <include name="verifyaarBuilderStatements"/>
+          <include name="verifyaarBillingTypes"/>
+          <include name="verifyaarMiscInvoiceTypes"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyaarStatements"/>
+          <include name="verifyaapWorkFlowCheckList"/>
+          <include name="verifyaapCrossEntityBill"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.CommunityAccountingPageTest -->
+      <class name="com.ciranet.community.communications.testcases.CommunicationLogsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyCommunicationLogsMenu"/>
+          <include name="verifyCommunicationLogsInPastdays"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.community.communications.testcases.CommunicationLogsPageTest -->
+      <class name="com.ciranet.myworkqueue.communitymanagement.testcases.ViolationReviewPageTest">
+        <methods>
+          <include name="verifyViolationInspectionHistoryPopup"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyViolationReviewURL"/>
+          <include name="loginSetup"/>
+          <include name="verifyToolbarFullScreenOption"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communitymanagement.testcases.ViolationReviewPageTest -->
+      <class name="com.ciranet.community.communications.testcases.AnnouncementLogsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verfiydeleteAnnouncement"/>
+          <include name="verfiyaddNewAnnouncement"/>
+          <include name="verfiyswitchingtabs"/>
+          <include name="verfiyEditAnnouncement"/>
+          <include name="loginSetup"/>
+          <include name="verifyHelpAnnouncements"/>
+          <include name="verifyAnnouncementLogsMenu"/>
+        </methods>
+      </class> <!-- com.ciranet.community.communications.testcases.AnnouncementLogsPageTest -->
+      <class name="com.ciranet.myworkqueue.communitymanagement.testcases.BoardApprovalsPageTest">
+        <methods>
+          <include name="verifyboardApprovalsMenu"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="verifyToolBarNormalScreenOption"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyExpandOptionClick"/>
+          <include name="verifySwitchTab"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communitymanagement.testcases.BoardApprovalsPageTest -->
+      <class name="com.ciranet.internaluser.testcases.InternalUserNavigationTest">
+        <methods>
+          <include name="verifyvendor1099PageLanding"/>
+          <include name="verifyunmatchedTransactionsPageLanding"/>
+          <include name="verifyarLedgerPageLanding"/>
+          <include name="verifyCCBCMBatches"/>
+          <include name="verifyMyWorkInbox"/>
+          <include name="verifyCCBCustomerCategory"/>
+          <include name="verifyfinancialReportsPageLanding"/>
+          <include name="verifyMetrics"/>
+          <include name="verifyCCBChargeCodeCategory"/>
+          <include name="verifyconfigurationPageLanding"/>
+          <include name="verifytestPlanConfigurationPageLanding"/>
+          <include name="setUp"/>
+          <include name="verifyciramailMenu"/>
+          <include name="verifyAPBillAnalysis"/>
+          <include name="verifycmBatchesPageLanding"/>
+          <include name="verifyMapofMyCommunitiesURL"/>
+          <include name="ScheduleFirstAssessment"/>
+          <include name="verifymySubmittedInvoicesPageLanding"/>
+          <include name="veriffundsTransferPageLanding"/>
+          <include name="verifytimeExpenseManagementPageLanding"/>
+          <include name="verifyAPLedger"/>
+          <include name="ViolationReview"/>
+          <include name="AddCommunity"/>
+          <include name="verifyopenCloseBooksPageLanding"/>
+          <include name="verifyapLedgerPageLanding"/>
+          <include name="verifyCCBJournalEntries"/>
+          <include name="verifyarCollectionPageLanding"/>
+          <include name="communityBlocks"/>
+          <include name="verifylogcallcreatecasePagelanding"/>
+          <include name="verifyCCBNewARInvoice"/>
+          <include name="verifyCCBEFTPAymentMAnagement"/>
+          <include name="verifyCCBCustomerAging"/>
+          <include name="verifyAPBatches"/>
+          <include name="verifylotPaymentAllocationPageLanding"/>
+          <include name="verifyCCBDeposits"/>
+          <include name="ClosingPortalLocationManager"/>
+          <include name="verifyCCBBillingItemManagement"/>
+          <include name="setup"/>
+          <include name="BoardApprovals"/>
+          <include name="verifyFinancialReportPublishing"/>
+          <include name="verifyCCBContractForms"/>
+          <include name="verifyCCBNewARPayment"/>
+          <include name="verifycustomerAgingPageLanding"/>
+          <include name="verifyaddPaymentsPageLanding"/>
+          <include name="verifyMyCommunitiesURL"/>
+          <include name="verifyCCBARBatches"/>
+          <include name="verifyOrderAnnualCoupon"/>
+          <include name="verifyCCBChargeRateCategory"/>
+          <include name="CommonLotsApprisal"/>
+          <include name="verifyCCBBudget"/>
+          <include name="verifyProjectTask"/>
+          <include name="verifyapBillAnalysisPageLanding"/>
+          <include name="verifyCloudDriveURL"/>
+          <include name="verifyvendorManagementPageLanding"/>
+          <include name="verifycheckAllModulesLinkPageLanding"/>
+          <include name="verifyciraBooksEntityPageLanding"/>
+          <include name="verify"/>
+          <include name="verifylocalOfficeOnlyCheckPrintingPageLanding"/>
+          <include name="verifyCCBConfiguration"/>
+          <include name="verifyreimbursementRequestPageLanding"/>
+          <include name="verifyapUnappliedPaymentsPageLanding"/>
+          <include name="verifyCCBNewAPBill"/>
+          <include name="verifyManagementReportPublishing"/>
+          <include name="verifyCCBChargeRates"/>
+          <include name="verifyCCBNewARAdjustment"/>
+          <include name="verifyhelpIcon"/>
+          <include name="verifycreateCashReceiptsPageLanding"/>
+          <include name="verifyarInvoiceAnalysisPageLanding"/>
+          <include name="verifyCCBCashReceipts"/>
+          <include name="verifyInternalTask"/>
+          <include name="verifymyCustomerChargesPageLanding"/>
+          <include name="verifyCCBGeneralLedgerReports"/>
+          <include name="verifyfinancialSummaryPageLanding"/>
+          <include name="verifymanageAAPWorkflowVendorEditLanding"/>
+          <include name="verifytimeandExpenseSubmissionPageLanding"/>
+          <include name="verifyCCBVendorWorkQueueMAnagement"/>
+          <include name="verifymanageBankStatementsPageLanding"/>
+          <include name="verifyAnnualCouponOrder"/>
+          <include name="verifyCorporateCirabook"/>
+          <include name="verifystatementApprovel"/>
+          <include name="verifymyTextURL"/>
+          <include name="verifyCCBOpenCloseBook"/>
+          <include name="verifyCCBReports"/>
+          <include name="verifyCCBProductCategory"/>
+          <include name="verifyvendorMissingBillsPageLanding"/>
+          <include name="ClosingRequests"/>
+          <include name="verifyCCBTrialBalance"/>
+          <include name="verifyCCBVendorManagement"/>
+          <include name="verifysubmitInvoicePageLanding"/>
+          <include name="verifytimeandexpensemanagementPageLanding"/>
+          <include name="verifySelectBillstoPay"/>
+          <include name="verifygeneralLedgerPageLanding"/>
+          <include name="verifyCCBUploadJE"/>
+          <include name="verifyeftPaymentManagementPageLanding"/>
+          <include name="AutomatedDocumentPrint"/>
+          <include name="OnBoardingFlag"/>
+          <include name="verifytestingConfigurationPageLanding"/>
+          <include name="verifyProcessInvoice"/>
+          <include name="verifyBankReturns"/>
+          <include name="verifyCCBBillingQueueManagement"/>
+          <include name="verifyvendorAgingPageLanding"/>
+          <include name="verifygenerateBuilderStatementsPageLanding"/>
+          <include name="verifymyTestsURL"/>
+          <include name="verifysearchInvoicesPageLanding"/>
+          <include name="verifyCCBReconcileBankAccount"/>
+          <include name="tearDown"/>
+          <include name="ScheduleInitialAssessment"/>
+          <include name="verifydepositsPageLanding"/>
+          <include name="verifyjournalEntriesPageLanding"/>
+          <include name="MaintenanceWorkOrder"/>
+          <include name="verifyInvoiceApproval"/>
+          <include name="verifyCCBSetupBillingItemCategory"/>
+          <include name="verifyCCBCheckPrintingManagement"/>
+          <include name="verifyCalendar"/>
+          <include name="verifybenchmarkReportPageLanding"/>
+          <include name="verifyAnnualStatementGenerationProcess"/>
+          <include name="verifycheckPrintingManagementPageLanding"/>
+          <include name="verifyaccountsPayablePageLanding"/>
+          <include name="verifyCCBbillingRules"/>
+          <include name="verifyCCBChargeCodes"/>
+          <include name="verifygeneralLedgerReportPageLanding"/>
+          <include name="verifyaccountsReceivablePageLanding"/>
+          <include name="loginSetup"/>
+          <include name="verifyCCBBankAccounts"/>
+          <include name="verifyAchievementsURL"/>
+          <include name="FullfillmentQueue"/>
+          <include name="verifycashManagementPageLanding"/>
+          <include name="verifybankReconciliationPageLanding"/>
+          <include name="verifyciraBooksModule"/>
+          <include name="verifyCCBCustomerManagement"/>
+          <include name="verifyCCBSubscription"/>
+          <include name="verifytrialBalancePageLanding"/>
+          <include name="verifyCCBVendor1099"/>
+          <include name="verifyCCBUploadBudgets"/>
+          <include name="ArchitecturalApplication"/>
+          <include name="verifyCCBARLedger"/>
+          <include name="verifyPaymentPostError"/>
+          <include name="verifyuploadJEsPageLanding"/>
+          <include name="verifyCCBARInvoiceAnalysis"/>
+          <include name="verifyUserDirectory"/>
+          <include name="verifyAnnualBudgetPreparation"/>
+          <include name="verifyCCBProduct"/>
+          <include name="OnBoardCheckList"/>
+          <include name="verifyCCBTimeExpenseManagement"/>
+          <include name="verifyCCBJournalEntryTemplate"/>
+          <include name="PropertyConveyances"/>
+          <include name="verifybillingQueueManagementPageLanding"/>
+          <include name="verifyAdvancedSearch"/>
+          <include name="verifyContactUs"/>
+          <include name="verifyCCBVendorAging"/>
+          <include name="verifyCCBAuditLog"/>
+          <include name="verifyjournalEntryTemplatesPageLanding"/>
+          <include name="verifyCCBCuctomerContracts"/>
+          <include name="verifycashReceiptsPageLanding"/>
+          <include name="verifyuploadBudgetsPageLanding"/>
+          <include name="verifylockboxPaymentFilePageLanding"/>
+        </methods>
+      </class> <!-- com.ciranet.internaluser.testcases.InternalUserNavigationTest -->
+      <class name="com.ciranet.community.dashboard.testcases.CommunityMetricsPageTest">
+        <methods>
+          <include name="verifyWorkArea"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyCommunityMetrixPage"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyEditLawsuit"/>
+          <include name="verifyAddLawsuit"/>
+          <include name="verifyTabSwitching"/>
+          <include name="verifyRegisteredACHOwners"/>
+        </methods>
+      </class> <!-- com.ciranet.community.dashboard.testcases.CommunityMetricsPageTest -->
+      <class name="com.ciranet.corporatecirabooks.generalledger.testcases.UploadBudgetsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyUploadBudgetsPage"/>
+          <include name="loginSetup"/>
+          <include name="verifyUploadBudgetsPageTitle"/>
+        </methods>
+      </class> <!-- com.ciranet.corporatecirabooks.generalledger.testcases.UploadBudgetsPageTest -->
+      <class name="com.ciranet.cirabooks.accountspayable.testcases.APExpenseDetailPageTest">
+        <methods>
+          <include name="verifyAPExpenseDetail"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyReclassifyButton"/>
+          <include name="loginSetup"/>
+          <include name="VerifyToolBarFullScreen"/>
+          <include name="verifyAmount"/>
+        </methods>
+      </class> <!-- com.ciranet.cirabooks.accountspayable.testcases.APExpenseDetailPageTest -->
+      <class name="com.ciranet.configurations.testcases.ClosingPortalPageTest">
+        <methods>
+          <include name="verifyNavigateToclosingPortal"/>
+          <include name="verifySelectSecondDropdown"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyConfigurationsMenu"/>
+          <include name="verifynewtierbutton"/>
+          <include name="verifyFirstDropdown"/>
+          <include name="verifySelectFourthDropdown"/>
+          <include name="verifySelectThirdDropdown"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ClosingPortalPageTest -->
+      <class name="com.ciranet.community.information.testcases.CommunityNotesPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyImportNoteTemplate"/>
+          <include name="tearDown"/>
+          <include name="verifyAddNewNote"/>
+          <include name="verifyActionMenu"/>
+          <include name="loginSetup"/>
+          <include name="verifyCommunityNotes"/>
+          <include name="verifyToolBarFullScreen"/>
+        </methods>
+      </class> <!-- com.ciranet.community.information.testcases.CommunityNotesPageTest -->
+      <class name="com.ciranet.preferences.testcases.PreferencesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="clickOpenInSameWindowDropdownValue"/>
+          <include name="tearDown"/>
+          <include name="clickThemeDropdown"/>
+          <include name="clickMainNavigaionBehaviourDropdownValue"/>
+          <include name="loginSetup"/>
+          <include name="clickPreferences"/>
+        </methods>
+      </class> <!-- com.ciranet.preferences.testcases.PreferencesPageTest -->
+      <class name="com.ciranet.myportfolio.revenuemanagement.testcases.BillingItemManagementPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="VerifybillingItemManagementURL"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.myportfolio.revenuemanagement.testcases.BillingItemManagementPageTest -->
+      <class name="com.ciranet.community.compliance.testcases.LastInspectionLogPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="VerifyToolBarFullScreen"/>
+          <include name="verifyLastInspectionResultsDetails"/>
+          <include name="verifyViolationHistory"/>
+          <include name="verifyCloseButtons"/>
+          <include name="verifyLastInspectionLogPage"/>
+          <include name="loginSetup"/>
+          <include name="verifyHistoryImage"/>
+        </methods>
+      </class> <!-- com.ciranet.community.compliance.testcases.LastInspectionLogPageTest -->
+      <class name="com.ciranet.community.compliance.testcases.DetailedViolationsLogPageTest">
+        <methods>
+          <include name="verifyEditAllowances"/>
+          <include name="tearDown"/>
+          <include name="verifyCustomViolationLettersAction"/>
+          <include name="verifyCloseViolationAction"/>
+          <include name="verifyClearAttorneyFlagAction"/>
+          <include name="verifyClosedViolationHistory"/>
+          <include name="verifyEscalateViolationAction"/>
+          <include name="verifyDetailedViolationsLogPages"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyClosedPropertyAddress"/>
+          <include name="loginSetup"/>
+          <include name="verifyReferToAttorneyAction"/>
+          <include name="verifyReportViolation"/>
+        </methods>
+      </class> <!-- com.ciranet.community.compliance.testcases.DetailedViolationsLogPageTest -->
+      <class name="com.ciranet.configurations.testcases.ResponseTemplatesPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyConfigReportTemplatesClickPages"/>
+          <include name="verifyResponseTemplate"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ResponseTemplatesPageTest -->
+      <class name="com.ciranet.administration.tools.testcases.EmployeeManagementPageTest">
+        <methods>
+          <include name="verifyEditEmployee"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyUserStatus"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyBiography"/>
+          <include name="verifyToolBarFullScreen"/>
+          <include name="verifyCommunityNotes"/>
+        </methods>
+      </class> <!-- com.ciranet.administration.tools.testcases.EmployeeManagementPageTest -->
+      <class name="com.ciranet.myworkqueue.disclosureprocessing.testcases.CommunityBlocksPageTest">
+        <methods>
+          <include name="verifyExportToExcelDownload"/>
+          <include name="setUp"/>
+          <include name="verifyAddBlock"/>
+          <include name="setup"/>
+          <include name="verifyCommunityFilterOption"/>
+          <include name="verifyColumnChooserClick"/>
+          <include name="verifyExpiredEditButtonoption"/>
+          <include name="tearDown"/>
+          <include name="verifyToolBarFullScreen"/>
+          <include name="verifySwitchingTabs"/>
+          <include name="verifyActiveEditButtonOption"/>
+          <include name="verifyCommunityBlocks"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.disclosureprocessing.testcases.CommunityBlocksPageTest -->
+      <class name="com.ciranet.myportfolio.revenuemanagement.testcases.MyCustomerChargesPageTest">
+        <methods>
+          <include name="verifyCreateNewCharge"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyMyCustomerChargesMenu"/>
+          <include name="verifyEditCharge"/>
+          <include name="verifyDeleteCharge"/>
+          <include name="loginSetup"/>
+          <include name="verifyEntitySelection"/>
+        </methods>
+      </class> <!-- com.ciranet.myportfolio.revenuemanagement.testcases.MyCustomerChargesPageTest -->
+      <class name="com.ciranet.community.communications.testcases.ResidentContactLogsPageTest">
+        <methods>
+          <include name="verfiyHistoricalHyperlink"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyHomeOwnerSearch"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.community.communications.testcases.ResidentContactLogsPageTest -->
+      <class name="com.ciranet.community.information.testcases.CommonLotsPageTest">
+        <methods>
+          <include name="verifyCategoryGrid"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyPropertyTaxesPaidTab"/>
+          <include name="tearDown"/>
+          <include name="verifyCommonLotActions"/>
+          <include name="verifyToolBarFullScreen"/>
+          <include name="verifyPTANotReceivedTab"/>
+          <include name="verifyCommonLotsNotes"/>
+          <include name="verifyAddNewCommonLot"/>
+          <include name="loginSetup"/>
+          <include name="verifyPTAReceivedTab"/>
+          <include name="verifyCommonLots"/>
+        </methods>
+      </class> <!-- com.ciranet.community.information.testcases.CommonLotsPageTest -->
+      <class name="com.ciranet.cirabooks.cashmanagement.testcases.DepositsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyExportToExcelDownload"/>
+          <include name="VerifyToolBarFullScreen"/>
+          <include name="tearDown"/>
+          <include name="verifyAddDeposits"/>
+          <include name="VerifycolumnChooserClick"/>
+          <include name="verifyDepositsMenu"/>
+          <include name="loginSetup"/>
+          <include name="verifyViewMenu"/>
+        </methods>
+      </class> <!-- com.ciranet.cirabooks.cashmanagement.testcases.DepositsPageTest -->
+      <class name="com.ciranet.homepage.testcases.HomePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyCommunitySearch"/>
+          <include name="loginSetup"/>
+          <include name="verifyHomeOwnerSearch"/>
+        </methods>
+      </class> <!-- com.ciranet.homepage.testcases.HomePageTest -->
+      <class name="com.ciranet.community.communications.testcases.MassCommunicationPageTest">
+        <methods>
+          <include name="verifyScheduledByHyperlink"/>
+          <include name="tearDown"/>
+          <include name="verifymailMergeMenu"/>
+          <include name="verifySearchFunctionality"/>
+          <include name="verifyStatusScheduled"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyScheduleCommunicationRefreshRecipientsButton"/>
+          <include name="verifyStatusProcessed"/>
+          <include name="verifyStatusPendingApproval"/>
+          <include name="verifyStatusCancel"/>
+          <include name="verifyFromProcessedDateDropdown"/>
+          <include name="loginSetup"/>
+          <include name="verifyNewTemplateButton"/>
+          <include name="verifyScheduleCommunicationRefreshButton"/>
+        </methods>
+      </class> <!-- com.ciranet.community.communications.testcases.MassCommunicationPageTest -->
+      <class name="com.ciranet.cirabooks.accountspayable.testcases.MySubmittedInvoicesPageTest">
+        <methods>
+          <include name="verifyAddNotes"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyVendorActivity"/>
+          <include name="loginSetup"/>
+          <include name="verifyMySubmittedInvoicesPage"/>
+          <include name="verifyBoardApproval"/>
+          <include name="verifyReset"/>
+          <include name="verifyAddSubmitedInvoice"/>
+        </methods>
+      </class> <!-- com.ciranet.cirabooks.accountspayable.testcases.MySubmittedInvoicesPageTest -->
+      <class name="com.ciranet.corporatecirabooks.accountsreceivable.testcases.NewARPaymentPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyNewARPayment"/>
+          <include name="loginSetup"/>
+          <include name="verifyCreateAR"/>
+        </methods>
+      </class> <!-- com.ciranet.corporatecirabooks.accountsreceivable.testcases.NewARPaymentPageTest -->
+      <class name="com.ciranet.myportfolio.timeandexpense.testcases.TimeandExpensePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifySubmitForApprovalCancelButton"/>
+          <include name="tearDown"/>
+          <include name="verifyMyPlaces"/>
+          <include name="verifyTabSwitching"/>
+          <include name="verifySubmitMileageExpenses"/>
+          <include name="loginSetup"/>
+          <include name="verifyTimeandExpensePageURL"/>
+          <include name="verifyNewTimeEntrySaveButton"/>
+        </methods>
+      </class> <!-- com.ciranet.myportfolio.timeandexpense.testcases.TimeandExpensePageTest -->
+      <class name="com.ciranet.community.compliance.testcases.OpenViolationsLogPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyViolationHistory"/>
+          <include name="verifyOpenViolationsLogPage"/>
+          <include name="verifyCloseButtons"/>
+          <include name="loginSetup"/>
+          <include name="verifyLogDetails"/>
+          <include name="verifyHistoryImage"/>
+        </methods>
+      </class> <!-- com.ciranet.community.compliance.testcases.OpenViolationsLogPageTest -->
+      <class name="com.ciranet.boardmembers.testcases.BoardMemberNavigationTest">
+        <methods>
+          <include name="verifyCommunityNotesMenu"/>
+          <include name="verifyVendorManagementMenu"/>
+          <include name="verifyCiraBooksOpenAPMenu"/>
+          <include name="verifyInsuranceMenu"/>
+          <include name="verifyReportAViolation"/>
+          <include name="verifySummaryPreviousMonthMenu"/>
+          <include name="setUp"/>
+          <include name="verifyCalendarMenu"/>
+          <include name="verifyCiraBookARDelinquencyDetailMenu"/>
+          <include name="verifyCiraBooksWorkSpace"/>
+          <include name="verifyDocumentsArchiveMenu"/>
+          <include name="verifyCommonLotsMenu"/>
+          <include name="verifyResidentContactLogs"/>
+          <include name="verifyLegalSummaryMenu"/>
+          <include name="verifyDetailedViolationLog"/>
+          <include name="tearDown"/>
+          <include name="verifyCommunityAssetsMenu"/>
+          <include name="verifyGraphsAndMetricsMenu"/>
+          <include name="verifyCiraBooksApLedgerMenu"/>
+          <include name="verifyBoardCommitteeMembersMenu"/>
+          <include name="setup"/>
+          <include name="loginSetup"/>
+          <include name="verifyRestrictionSummary"/>
+          <include name="verifyGLTrialBalance"/>
+          <include name="verifyFRActualVsBudget"/>
+          <include name="verifyEnforcementPolicyMenu"/>
+          <include name="verifyResidentDirectoryMenu"/>
+          <include name="verifyCertiedTracking"/>
+          <include name="verifyCiraBooksMySubmittedInvoicesMenu"/>
+          <include name="verifyPropertiesMenu"/>
+          <include name="verifyFinancialSummary"/>
+          <include name="verifyInfoSummaryMenu"/>
+          <include name="verifyCiraBooksMenu"/>
+          <include name="verifyBenchmarkReport"/>
+          <include name="verifymyWQBoardApproval"/>
+          <include name="verifyLastInspectionLog"/>
+          <include name="verifyCiraBooksSubmitInvoiceMenu"/>
+          <include name="verifyNewDocumentSummaryMenu"/>
+          <include name="verifyCiraBookARAssessmentRulessMenu"/>
+          <include name="verifymyWQArchitecturalApplication"/>
+          <include name="verifyGLReport"/>
+          <include name="verifyAmenitiesAccessControlMenu"/>
+          <include name="verifyMoveInSummaryMenu"/>
+          <include name="verifyMapMenu"/>
+          <include name="verifyCiraBooksVendorAgingMenu"/>
+          <include name="verifyCiraBooksSearchInvoicesMenu"/>
+          <include name="verifyCommunication"/>
+          <include name="verifyAdditionalInfoMenu"/>
+          <include name="verifyHomePageSearch"/>
+          <include name="verifymyWQMaintenceWorkOrders"/>
+          <include name="verifyOpenViolationsLog"/>
+          <include name="verifyMailMerge"/>
+          <include name="verifyCiraBookARCustomerAgingMenu"/>
+          <include name="verifyOnDemandMenu"/>
+          <include name="verifyCiraBookARsMenu"/>
+        </methods>
+      </class> <!-- com.ciranet.boardmembers.testcases.BoardMemberNavigationTest -->
+      <class name="com.ciranet.myworkqueue.communitymanagement.testcases.CommonLotsAppraisalPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="tearDown"/>
+          <include name="verifycsvOption"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyexcelOption"/>
+          <include name="loginSetup"/>
+          <include name="verifyCommonLotsAppraisalURL"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communitymanagement.testcases.CommonLotsAppraisalPageTest -->
+      <class name="com.ciranet.configurations.testcases.EnforcementPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyViolationRestrictionDefinition"/>
+          <include name="tearDown"/>
+          <include name="verifyArchitecturalCategories"/>
+          <include name="verifyViolationEscalationConfiguration"/>
+          <include name="verifyViolationCategorySubCategoryConfiguration"/>
+          <include name="loginSetup"/>
+          <include name="verifyConfigEnforcementClickPages"/>
+          <include name="verifyViolationNotificationTemplates"/>
+          <include name="verifyArchitecturalFormsandGuides"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.EnforcementPageTest -->
+      <class name="com.ciranet.myworkqueue.communitymanagement.testcases.FulfillmentQueuePageTest">
+        <methods>
+          <include name="verifyactionSaveCloseClick"/>
+          <include name="verifyactionSaveClick"/>
+          <include name="verifyActionCloseButton"/>
+          <include name="tearDown"/>
+          <include name="verifyActionDocumenttabclick"/>
+          <include name="verifyrefreshQueuebutton"/>
+          <include name="verifyFulfillmentQueuePageURL"/>
+          <include name="verifyAddJobSaveAndCloseButton"/>
+          <include name="verifyActionCompletionttabclick"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyClosedJobsSearchButton"/>
+          <include name="verifyExpandOption"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyToolbarNormalScreenOption"/>
+          <include name="verifyAddCompletedJobbuttonSaveandAddDocuments"/>
+          <include name="verifyAddCompletedJobbuttonclick"/>
+          <include name="verifyAddCompletionJobtab"/>
+          <include name="loginSetup"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="verifySwitchtab"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.communitymanagement.testcases.FulfillmentQueuePageTest -->
+      <class name="com.ciranet.loginpage.testcases.LoginPageTest">
+        <methods>
+          <include name="verifyLoginPageTitle"/>
+          <include name="tearDown"/>
+          <include name="InvalidUserValidPassword"/>
+          <include name="clickBrowserBackTest"/>
+          <include name="verifyValidLogin"/>
+          <include name="emptyUserEmptyPassword"/>
+          <include name="VerifyForgotPasswordPageComponents"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="showPasswordFunctionality"/>
+          <include name="VerifyForgotPasswordButtonClick"/>
+          <include name="verifyLoginPageComponents"/>
+          <include name="verifyValidLoginEnterKeyPress"/>
+          <include name="InvalidUserInvalidPassword"/>
+          <include name="verifyLogout"/>
+          <include name="validUserInvalidPassword"/>
+          <include name="VerifyChooseDifferentPortal"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.loginpage.testcases.LoginPageTest -->
+      <class name="com.ciranet.configurations.testcases.ReportTemplatesPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyConfigReportTemplatesClickPages"/>
+          <include name="tearDown"/>
+          <include name="loginSetup"/>
+          <include name="verifyLetterHeadTemplate"/>
+          <include name="verifyLetterTemplate"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ReportTemplatesPageTest -->
+      <class name="com.ciranet.configurations.testcases.CommunityPageTest">
+        <methods>
+          <include name="verifyInfo"/>
+          <include name="verifyHolidayDropdown"/>
+          <include name="tearDown"/>
+          <include name="verifyConfigurationsMenu"/>
+          <include name="verifyNotes"/>
+          <include name="verifyPrintingProvider"/>
+          <include name="verifyOnwerFees"/>
+          <include name="verifyAmenityDropdown"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyFullfilmentJobSpecialPricingDropdown"/>
+          <include name="verifyMassCommunicationConfiguration"/>
+          <include name="verifyCollectionLettersDropdown"/>
+          <include name="verifyBoardApprovalDropdown"/>
+          <include name="verifyNavigateToCommunityConfigurations"/>
+          <include name="loginSetup"/>
+          <include name="verifyCommunityConfigurationDropdown"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.CommunityPageTest -->
+      <class name="com.ciranet.myworkqueue.testcases.InternalTasksPageTest">
+        <methods>
+          <include name="verifyEmailSetting"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="tearDown"/>
+          <include name="verifyRefreshButton"/>
+          <include name="verifyExpandCollapseOption"/>
+          <include name="loginSetup"/>
+          <include name="verifyActiveFilterSelect"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyHelpInternalTask"/>
+          <include name="verifytoolBarNormalScreenOption"/>
+          <include name="verifyInternalTasksPageURL"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.testcases.InternalTasksPageTest -->
+      <class name="com.ciranet.community.communications.testcases.MailMergePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyDropdownselection"/>
+          <include name="verifyCreateLabels"/>
+          <include name="tearDown"/>
+          <include name="verifymailMergeMenu"/>
+          <include name="verifyCombinedOwnerhyperlink"/>
+          <include name="verifyhelpMailMerge"/>
+          <include name="verifyViewSaveStandardLetterheadTemplate"/>
+          <include name="verifyBrowseButton"/>
+          <include name="loginSetup"/>
+          <include name="verifyCustomerIdhyperlink"/>
+        </methods>
+      </class> <!-- com.ciranet.community.communications.testcases.MailMergePageTest -->
+      <class name="com.ciranet.myportfolio.timeandexpense.testcases.TimeandExpenseSubmissionsPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifySubmittedByColumn"/>
+          <include name="verifyMileageExpenseLabel"/>
+          <include name="verifyDenyMenu"/>
+          <include name="tearDown"/>
+          <include name="verifyApproveMenu"/>
+          <include name="verifyEntitySelection"/>
+          <include name="loginSetup"/>
+          <include name="verifyTimeandExpenseSubmissionsMenu"/>
+        </methods>
+      </class> <!-- com.ciranet.myportfolio.timeandexpense.testcases.TimeandExpenseSubmissionsPageTest -->
+      <class name="com.ciranet.configurations.testcases.ServicesPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyBoardPortal"/>
+          <include name="verifyServicesPage"/>
+          <include name="verifyMassCommunicationSystemTemplateConfiguration"/>
+          <include name="verifyResidentPortal"/>
+          <include name="verifyCalendarConfiguration"/>
+          <include name="verifyBussinessHours"/>
+          <include name="verifyServices"/>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="verifyServiceRole"/>
+          <include name="verifyServiceGroup"/>
+          <include name="verifyBrandingConfiguration"/>
+          <include name="loginSetup"/>
+        </methods>
+      </class> <!-- com.ciranet.configurations.testcases.ServicesPageTest -->
+      <class name="com.ciranet.myworkqueue.testcases.ProjectsTasksPageTest">
+        <methods>
+          <include name="verifyuserlogout"/>
+          <include name="verifyRefreshButtonClick"/>
+          <include name="tearDown"/>
+          <include name="verifyMenuExpandCollapseOption"/>
+          <include name="verifyProjectTaskPage"/>
+          <include name="verifyDaysTextbox"/>
+          <include name="verifyHelpOfProjectTask"/>
+          <include name="verifyAddNewProjectTaskButtonClick"/>
+          <include name="verifyNotificationSetting"/>
+          <include name="verifyActivefilterselection"/>
+          <include name="setup"/>
+          <include name="setUp"/>
+          <include name="VerifySwitchtab"/>
+          <include name="verifyColumnChooserOption"/>
+          <include name="verifyToolbarFullScreenOption"/>
+          <include name="verifyToolbarNormalScreenOption"/>
+          <include name="loginSetup"/>
+          <include name="verifyActionEditFunctionality"/>
+        </methods>
+      </class> <!-- com.ciranet.myworkqueue.testcases.ProjectsTasksPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
