@@ -62,8 +62,6 @@ public class ResidentContactLogsPage extends BasePage
 	
 	@FindBy(xpath = "(//tr[@class='dx-row dx-data-row dx-row-lines dx-column-lines'])[1]//td[4]")
 	WebElement historicalHyperlink;
-	
-	
 
 	QuickSearch quickSearch = new QuickSearch(driver);
 	Navigation navigationSearch = new Navigation(driver);
