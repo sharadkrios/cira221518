@@ -4,8 +4,6 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeoutException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -65,6 +63,8 @@ public class ResidentContactLogsPage extends BasePage
 	@FindBy(xpath = "(//tr[@class='dx-row dx-data-row dx-row-lines dx-column-lines'])[1]//td[4]")
 	WebElement historicalHyperlink;
 	
+	
+
 	QuickSearch quickSearch = new QuickSearch(driver);
 	Navigation navigationSearch = new Navigation(driver);
 	
@@ -156,57 +156,59 @@ public class ResidentContactLogsPage extends BasePage
 		}
 	}
 	
-	// Method to verify the historical hyperlink
-    public boolean verifyHistoricalHyperlink() 
-    {
-        try 
-        {
-            // Wait for the historical hyperlink to be visible
-            waitForElementToBeVisible(historicalHyperlink);
+	public boolean verifyHistoricalHyperlink() 
+	{
+	    try 
+	    {
+	        // Wait for the historical hyperlink to be visible
+	        waitForElementToBeVisible(historicalHyperlink);
 
-            // Check if the hyperlink is displayed
-            if (isElementDisplayed(historicalHyperlink)) 
-            {
-                // Click the historical hyperlink
-                clickElement(historicalHyperlink);
-                waitForInvisibility(loaderIcon);
+	        if (isElementDisplayed(historicalHyperlink)) 
+	        {
+	            // Click the historical hyperlink
+	            clickElement(historicalHyperlink);
+	            waitForInvisibility(loaderIcon);
+	            
+	            Thread.sleep(5000);
+	            
+				// Retrieve all window handles and switch to the new tab
+				List<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
-                // Retrieve all window handles
-                List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+				// Ensure a new tab has opened
+				if (tabs.size() > 1) 
+				{
+					driver.switchTo().window(tabs.get(1));
+					LoggerManager.info("Switched to historical Hyperlink browser");
+					
+		            // Maximize the new window
+		            driver.manage().window().maximize();
+		            waitForInvisibility(loaderIcon);
+		            
+					// Perform actions on the pop-up
+					driver.close();
 
-                // Ensure a new tab has opened
-                if (tabs.size() > 1) 
-                {
-                    driver.switchTo().window(tabs.get(1)); // Switch to the new tab
-                    LoggerManager.info("Switched to the historical hyperlink browser.");
+					LoggerManager.info("Successfully verified historical Hyperlink browser");
+					return true;
+				}
+				else 
+				{
+					LoggerManager.warn("No new tab browser window is displayed after clicking historicalHyperlink");
+					return false;
+				}
+	        }
 
-                    // Maximize the new tab's window
-                    driver.manage().window().maximize();
-                    waitForInvisibility(loaderIcon);
+	        else 
+	        {
+	            LoggerManager.warn("Historical Hyperlink is not displayed.");
+	            
+	        }
+	    } 
+	    catch (Exception e) 
+	    {
+	        LoggerManager.error("An error occurred while verifying the Historical Hyperlink: " + e.getMessage());
+	        return false;
+	    }
+		return false;
+	}
 
-                    // Close the new tab and switch back to the original window
-                    driver.close();
-                    driver.switchTo().window(tabs.get(0)); // Return to the original window
-
-                    LoggerManager.info("Successfully verified the historical hyperlink.");
-                    return true;
-                }
-                else 
-                {
-                    LoggerManager.warn("No new tab opened after clicking the historical hyperlink.");
-                    return false;
-                }
-            } 
-            else 
-            {
-                LoggerManager.warn("Historical hyperlink is not displayed.");
-                return false;
-            }
-        } 
-        catch (Exception e) 
-        {
-            LoggerManager.error("An unexpected error occurred while verifying the historical hyperlink.");
-            return false;
-        }
-    }
 }
