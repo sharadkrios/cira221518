@@ -59,13 +59,13 @@ public class ResidentContactLogsPage extends BasePage
 
 	@FindBy(xpath ="//i[@class='dx-icon fas fa-times']")
 	WebElement communityAlertsClose;
-	
-	@FindBy(xpath = "(//tr[@class='dx-row dx-data-row dx-row-lines dx-column-lines'])[1]//td[4]")
+
+	@FindBy(xpath ="(//div//app-hyperlink-creator//a[@class='cc-hyperlink dx-theme-accent-as-text-color'])[1]")
 	WebElement historicalHyperlink;
 
 	QuickSearch quickSearch = new QuickSearch(driver);
 	Navigation navigationSearch = new Navigation(driver);
-	
+
 	public void pressEscapeKey() 
 	{
 		try 
@@ -84,10 +84,8 @@ public class ResidentContactLogsPage extends BasePage
 		catch (Exception e) 
 		{
 			LoggerManager.error("Error in pressing the Escape key: " + e.getMessage());
-			// Handle exception here as needed, without re-throwing
 		}
 	}
-
 
 	public boolean verifySearchCommunity(String communitySearchKeyword) 
 	{
@@ -117,10 +115,8 @@ public class ResidentContactLogsPage extends BasePage
 			try 
 			{
 				waitForInvisibility(loaderIcon);
-				waitForInvisibility(loaderIcon);
 				waitForElementToBeVisible(communityAlertsClose);
 				clickElement(communityAlertsClose);
-				waitForInvisibility(loaderIcon);
 				waitForInvisibility(loaderIcon);
 
 				LoggerManager.info("Navigating to 'Resident Contact Logs' through side navigation.");
@@ -138,37 +134,47 @@ public class ResidentContactLogsPage extends BasePage
 				waitForInvisibility(loaderIcon);
 
 				LoggerManager.info("Successfully accessed 'Resident Contact Logs' menu after community search.");
-				return true;
+
+				boolean isHeaderCorrect= isElementDisplayed(lblheader);
+				LoggerManager.info("Header text validation: " + (isHeaderCorrect ? "Passed" : "Failed"));
+
+				return isHeaderCorrect;
 
 			} 
 			catch (Exception e) 
 			{
 				LoggerManager.error("An error occurred during navigation or menu access: " + e.getMessage());
-				throw new Exception("Error occurred during community search or navigation: " + communitySearchKeyword +e);
+				return false;
 			}
 		} 
 		catch (Exception e) 
 		{
-			LoggerManager.error("An unexpected error occurred while verifying community search: " + e.getMessage() +e);
+			LoggerManager.error("An unexpected error occurred while verifying community search: " + e.getMessage());
 			return false;
 		}
 	}
-	
+
 	public boolean verifyHistoricalHyperlink() 
 	{
-	    try 
-	    {
-	        // Wait for the historical hyperlink to be visible
-	        waitForElementToBeVisible(historicalHyperlink);
+		try 
+		{
+			waitForInvisibility(loaderIcon);
 
-	        if (isElementDisplayed(historicalHyperlink)) 
-	        {
-	            // Click the historical hyperlink
-	            clickElement(historicalHyperlink);
-	            waitForInvisibility(loaderIcon);
-	            
-	            Thread.sleep(5000);
-	            
+			// Wait for the historical hyperlink to be visible
+			waitForElementToBeVisible(historicalHyperlink);
+
+			if (isElementDisplayed(historicalHyperlink)) 
+			{
+				// Click the historical hyperlink
+				//clickElement(historicalHyperlink);
+
+				WebElement linkElement = driver.findElement((By) historicalHyperlink); 
+				// Get the visible text of the link 
+				String linkText = linkElement.getText();
+
+				switchToNewTabAndCloseNewTab(linkElement);
+
+				Thread.sleep(5000);
 				// Retrieve all window handles and switch to the new tab
 				List<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
@@ -177,11 +183,11 @@ public class ResidentContactLogsPage extends BasePage
 				{
 					driver.switchTo().window(tabs.get(1));
 					LoggerManager.info("Switched to historical Hyperlink browser");
-					
-		            // Maximize the new window
-		            driver.manage().window().maximize();
-		            waitForInvisibility(loaderIcon);
-		            
+
+					// Maximize the new window
+					driver.manage().window().maximize();
+					waitForInvisibility(loaderIcon);
+
 					// Perform actions on the pop-up
 					driver.close();
 
@@ -193,20 +199,19 @@ public class ResidentContactLogsPage extends BasePage
 					LoggerManager.warn("No new tab browser window is displayed after clicking historicalHyperlink");
 					return false;
 				}
-	        }
+			}
 
-	        else 
-	        {
-	            LoggerManager.warn("Historical Hyperlink is not displayed.");
-	            
-	        }
-	    } 
-	    catch (Exception e) 
-	    {
-	        LoggerManager.error("An error occurred while verifying the Historical Hyperlink: " + e.getMessage());
-	        return false;
-	    }
+			else 
+			{
+				LoggerManager.warn("Historical Hyperlink is not displayed.");
+
+			}
+		} 
+		catch (Exception e) 
+		{
+			LoggerManager.error("An error occurred while verifying the Historical Hyperlink: " + e.getMessage());
+			return false;
+		}
 		return false;
 	}
-
 }
