@@ -50,14 +50,10 @@ public class MailMergePage extends BasePage
 	WebElement communicationsMenu;
 
 	@FindBy(xpath = "//span[normalize-space()='Mail Merge']")
-	WebElement mailMergeMenu;
+	WebElement mailMerge;
 
 	@FindBy(xpath="//h2[@class='page-header']")
 	WebElement lblheader;
-
-	//@FindBy(xpath = "dx-loadindicator-icon")
-	//@FindBy(xpath = "")
-	//WebElement loaderIcon;
 
 	@FindBy(xpath="//div[contains(@class, 'dx-loadindicator-icon')]")
 	WebElement loaderIcon;
@@ -98,6 +94,9 @@ public class MailMergePage extends BasePage
 	@FindBy(xpath ="//i[@class='dx-icon fas fa-times']")
 	WebElement communityAlertsClose;
 	
+	@FindBy(xpath = "//h2[contains(text(),'Mail Merge')]")
+	public WebElement  mailMergeLabel;
+	
 	QuickSearch quickSearch = new QuickSearch(driver);
 	Navigation navigationSearch = new Navigation(driver);
 	
@@ -113,13 +112,14 @@ public class MailMergePage extends BasePage
 			robot.keyRelease(KeyEvent.VK_ESCAPE);
 			LoggerManager.info("Escape key released.");
 
-		} catch (AWTException e) {
+		} catch (AWTException e) 
+		{
 			LoggerManager.error("Error in pressing the Escape key: " + e.getMessage());
 			// Handle exception here as needed, without re-throwing
 		}
 	}
 
-	public boolean verifySearchCommunity(String communitySearchKeyword) 
+	public boolean navigate(String communitySearchKeyword) 
 	{
 		waitForInvisibility(loaderIcon);
 
@@ -152,32 +152,34 @@ public class MailMergePage extends BasePage
 				clickElement(communityAlertsClose);
 				waitForInvisibility(loaderIcon);
 				
-				LoggerManager.info("Navigating to 'Mail Merge' through side navigation.");
+				LoggerManager.info("Navigating to 'Mail Merge' page");
 				navigationSearch.navigateBySideNavigation(By.xpath("//span[normalize-space()='Mail Merge']"), "Mail Merge");
 				waitForInvisibility(loaderIcon);
 
 				// Scroll and verify 'Mail Merge' menu visibility
-				LoggerManager.info("Scrolling to locate 'Mail Merge' menu.");
-				waitForElementToBeVisible(mailMergeMenu);
+				LoggerManager.info("Scrolling to locate 'Mail Merge'");
+				waitForElementToBeVisible(mailMerge);
 				waitForInvisibility(loaderIcon);
 				
-				scrollToElement(mailMergeMenu);
+				scrollToElement(mailMerge);
 				waitForInvisibility(loaderIcon);
 
 				LoggerManager.info("Attempting to press Escape key to close any popups.");
 
 				LoggerManager.info("'Mail Merge' menu is visible; attempting to click.");
-				clickElement(mailMergeMenu);
+				clickElement(mailMerge);
 
 				waitForInvisibility(loaderIcon);
-				waitForInvisibility(loaderIcon);
-				waitForInvisibility(loaderIcon);
-				
+
 				waitForElementToBeVisible(dropdownClick);
 				waitForInvisibility(loaderIcon);
+				
+		        // Check if the label text matches
+		        boolean isLabelCorrect = mailMerge.getText().equals("Mail Merge");
+		        LoggerManager.info("Label text validation: " + (isLabelCorrect ? "Passed" : "Failed"));
 
-				LoggerManager.info("Successfully accessed 'Mail Merge' menu after community search.");
-				return true;
+				LoggerManager.info("Successfully accessed 'Mail Merge' after community search.");
+				return isLabelCorrect;
 
 			} 
 			catch (Exception e) 
@@ -192,7 +194,8 @@ public class MailMergePage extends BasePage
 			return false;
 		}
 	}
-	public boolean verifyDropdownSelection() 
+
+	public boolean verifyMailMergeDropdownSelection() 
 	{
 		try {
 			// Ensure dropdown is visible and click it
@@ -235,7 +238,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean verifyCreateLabels() {
+	public boolean verifyMailMergeCreateLabelsButton() {
 		try {
 			// Wait for and click the dropdown
 			waitForElementToBeVisible(dropdownClick);
@@ -282,7 +285,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean verifyBrowseButton() 
+	public boolean verifyMailMergeBrowseButton() 
 	{
 		try 
 		{
@@ -364,7 +367,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean verifyViewSaveStandardLetterheadTemplate() {
+	public boolean verifyMailMergeViewOrSaveLetterheadTemplate() {
 		try {
 			// Click dropdown and select 'Letters' option
 			clickElement(dropdownClick);
@@ -393,7 +396,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean helpMailMerge() {
+	public boolean verifyHelpButton() {
 		try {
 			// Wait for the loader to disappear and the Mail Merge help element to be visible
 			waitForInvisibility(loaderIcon);
@@ -434,7 +437,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean verifyCustomerIdhyperlink() {
+	public boolean verifyCustomerIdHyperlinks() {
 		try {
 			// Wait for the loader icon to disappear and the customer ID element to be visible
 			waitForInvisibility(loaderIcon);
@@ -477,7 +480,7 @@ public class MailMergePage extends BasePage
 		}
 	}
 
-	public boolean verifyCombinedOwnerhyperlink() 
+	public boolean verifyCombinedOwnerHyperlinks() 
 	{
 		try {
 			// Wait for the loader icon to disappear and the combined owner element to be visible
