@@ -2,8 +2,6 @@ package com.ciranet.community.communications.pages;
 
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -60,7 +58,7 @@ public class ResidentContactLogsPage extends BasePage
 	@FindBy(xpath ="//i[@class='dx-icon fas fa-times']")
 	WebElement communityAlertsClose;
 
-	@FindBy(xpath ="(//div//app-hyperlink-creator//a[@class='cc-hyperlink dx-theme-accent-as-text-color'])[1]")
+	@FindBy(xpath ="(//a/span)[1]")
 	WebElement historicalHyperlink;
 
 	QuickSearch quickSearch = new QuickSearch(driver);
@@ -87,7 +85,7 @@ public class ResidentContactLogsPage extends BasePage
 		}
 	}
 
-	public boolean verifySearchCommunity(String communitySearchKeyword) 
+	public boolean navigate(String communitySearchKeyword)  
 	{
 		waitForInvisibility(loaderIcon);
 
@@ -122,13 +120,14 @@ public class ResidentContactLogsPage extends BasePage
 				LoggerManager.info("Navigating to 'Resident Contact Logs' through side navigation.");
 				navigationSearch.navigateBySideNavigation(By.xpath("//span[normalize-space()='Resident Contact Logs']"), "Resident Contact Logs");
 				waitForInvisibility(loaderIcon);
-
+				waitForInvisibility(loaderIcon);
+				
 				// Scroll and verify 'Mail Merge' menu visibility
 				LoggerManager.info("Scrolling to locate 'Resident Contact Logs' menu");
 				waitForElementToBeVisible(residentContactLogsMenu);
 				waitForInvisibility(loaderIcon);
 
-				LoggerManager.info("'Communication Logs' menu is visible; attempting to click.");
+				LoggerManager.info("Resident Contact Logs is visible; attempting to click.");
 				clickElement(residentContactLogsMenu);
 
 				waitForInvisibility(loaderIcon);
@@ -154,64 +153,39 @@ public class ResidentContactLogsPage extends BasePage
 		}
 	}
 
-	public boolean verifyHistoricalHyperlink() 
+	public boolean verifyResidentContactLogsHistoricalHyperlink() 
 	{
-		try 
-		{
-			waitForInvisibility(loaderIcon);
+	    try 
+	    {
+	        // Wait for loader icon to disappear
+	        waitForInvisibility(loaderIcon);
 
-			// Wait for the historical hyperlink to be visible
-			waitForElementToBeVisible(historicalHyperlink);
+	        // Ensure the historical hyperlink is visible
+	        waitForElementToBeVisible(historicalHyperlink);
+	        waitForInvisibility(loaderIcon);
 
-			if (isElementDisplayed(historicalHyperlink)) 
-			{
-				// Click the historical hyperlink
-				//clickElement(historicalHyperlink);
+	        // Check if the hyperlink is displayed
+	        if (isElementDisplayed(historicalHyperlink)) 
+	        {
+	            LoggerManager.info("Historical Hyperlink is displayed. Attempting to click.");
 
-				WebElement linkElement = driver.findElement((By) historicalHyperlink); 
-				// Get the visible text of the link 
-				String linkText = linkElement.getText();
+	            // Ensure the hyperlink is clickable before clicking
+	            waitForElementToBeClickable(historicalHyperlink);
+	            clickElement(historicalHyperlink);
+	            LoggerManager.info("Successfully clicked on the Historical Hyperlink.");
 
-				switchToNewTabAndCloseNewTab(linkElement);
-
-				Thread.sleep(5000);
-				// Retrieve all window handles and switch to the new tab
-				List<String> tabs = new ArrayList<>(driver.getWindowHandles());
-
-				// Ensure a new tab has opened
-				if (tabs.size() > 1) 
-				{
-					driver.switchTo().window(tabs.get(1));
-					LoggerManager.info("Switched to historical Hyperlink browser");
-
-					// Maximize the new window
-					driver.manage().window().maximize();
-					waitForInvisibility(loaderIcon);
-
-					// Perform actions on the pop-up
-					driver.close();
-
-					LoggerManager.info("Successfully verified historical Hyperlink browser");
-					return true;
-				}
-				else 
-				{
-					LoggerManager.warn("No new tab browser window is displayed after clicking historicalHyperlink");
-					return false;
-				}
-			}
-
-			else 
-			{
-				LoggerManager.warn("Historical Hyperlink is not displayed.");
-
-			}
-		} 
-		catch (Exception e) 
-		{
-			LoggerManager.error("An error occurred while verifying the Historical Hyperlink: " + e.getMessage());
-			return false;
-		}
-		return false;
+	            return true;
+	        }
+	        else 
+	        {
+	            LoggerManager.warn("Historical Hyperlink is not displayed.");
+	            return false;
+	        }
+	    } 
+	    catch (Exception e) 
+	    {
+	        LoggerManager.error("An error occurred while verifying the Historical Hyperlink: " + e.getMessage());
+	        return false;
+	    }
 	}
 }
