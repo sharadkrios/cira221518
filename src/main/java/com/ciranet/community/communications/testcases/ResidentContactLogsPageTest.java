@@ -16,48 +16,35 @@ import com.ciranet.utilities.RequiresLogin;
 public class ResidentContactLogsPageTest extends TestBase 
 {
 
-    ResidentContactLogsPage residentContactLogs = createPage(ResidentContactLogsPage.class);
+	ResidentContactLogsPage residentContactLogs = createPage(ResidentContactLogsPage.class);
 
-    /**
-     * Test to verify that the Resident Contact Logs page can successfully search a community.
-     */
-    @Test(priority = 0, description = "Verify Resident Contact Logs Community Search", groups = {Constants.SMOKE_TESTING}, alwaysRun = true)
-    public void verifyHomeOwnerSearch() 
-    {
-        LoggerManager.info("Starting test: Verify Resident Contact Logs - Community Search");
+	@Test(priority = 0, description = "Verify Resident Contact Logs Community Search", groups = {Constants.SMOKE_TESTING}, alwaysRun = true)
+	public void navigate() 
+	{
+		LoggerManager.info("Verifying Resident Contact Logs navigation");
+		TestBase.setExtentReportSettings("Resident Contact Logs Test", Constants.SMOKE_TESTING, "Verify Resident Contact Logs navigation", "Verifying Resident Contact Logs navigation");
+		residentContactLogs = new ResidentContactLogsPage(driver);
+		
+		// Define the community search keyword
+		String communitySearchKeyword = "Amberwood";
 
-        // Set Extent report details
-        TestBase.setExtentReportSettings("Resident Contact Logs", Constants.SMOKE_TESTING, "Verify Community Search on Resident Contact Logs", "Validating Community Search functionality");
+		assertTrue(residentContactLogs.navigate(communitySearchKeyword),"Error navigating to Resident Contact Logs page");
+	}
 
-        // Instantiate the page object
-        residentContactLogs = new ResidentContactLogsPage(driver);
+	@Test(priority = 1, description = "Verify Resident Contact Logs Historical Hyperlink", groups = {Constants.FUNCTIONAL_TESTING}, alwaysRun = true)
+	public void verifyResidentContactLogsHistoricalHyperlink() throws TimeoutException 
+	{
+		LoggerManager.info("Starting test: Verify Resident Contact Logs Historical Hyperlink");
 
-        // Define the community search keyword
-        String communitySearchKeyword = "Amberwood";
+		// Set Extent report details
+		TestBase.setExtentReportSettings("Resident Contact Logs - Historical Hyperlink",Constants.FUNCTIONAL_TESTING," Verify Resident Contact Logs Historical Hyperlink","Verifying Resident Contact Logs Historical Hyperlink");
 
-        // Perform the community search and validate
-        LoggerManager.info("Performing community search for: " + communitySearchKeyword);
-        assertTrue(residentContactLogs.verifySearchCommunity(communitySearchKeyword),"Resident Contact Logs is not visible after community search.");
-        LoggerManager.info("Test passed: Community Search in Resident Contact Logs verified successfully.");
-    }
+		// Instantiate the page object
+		residentContactLogs = new ResidentContactLogsPage(driver);
 
-    /**
-     * Test to verify the historical hyperlink functionality in Resident Contact Logs.
-     */
-    @Test(priority = 1, description = "Verify Resident Contact Logs Historical Hyperlinks", groups = {Constants.FUNCTIONAL_TESTING}, alwaysRun = true)
-    public void verifyHistoricalHyperlink() throws TimeoutException 
-    {
-        LoggerManager.info("Starting test: Verify Resident Contact Logs Historical Hyperlinks");
-
-        // Set Extent report details
-        TestBase.setExtentReportSettings("Resident Contact Logs - Historical Hyperlinks",Constants.FUNCTIONAL_TESTING,"Resident Contact Logs","Validating functionality of Resident Contact Logs Historical Hyperlinks");
-
-        // Instantiate the page object
-        residentContactLogs = new ResidentContactLogsPage(driver);
-
-        // Perform the historical hyperlink validation
-        LoggerManager.info("Verifying the historical hyperlinks functionality.");
-        assertTrue(residentContactLogs.verifyHistoricalHyperlink(),"Resident Contact Log Detail Historical hyperlinks are not functional or not visible.");
-        LoggerManager.info("Test passed: Historical hyperlinks in Resident Contact Logs verified successfully.");
-    }
+		// Perform the historical hyperlink validation
+		LoggerManager.info("Verifying the historical hyperlinks functionality.");
+		assertTrue(residentContactLogs.verifyResidentContactLogsHistoricalHyperlink(),"Resident Contact Log Detail Historical hyperlink is not functional or not visible.");
+		LoggerManager.info("Test passed: Historical hyperlinks in Resident Contact Logs verified successfully.");
+	}
 }
